@@ -1,0 +1,43 @@
+{
+	"chat.commandCenter.enabled": false,
+	"editor.autoClosingBrackets": "never",
+	"editor.autoClosingComments": "never",
+	"editor.autoClosingDelete": "never",
+	"editor.autoClosingQuotes": "never",
+	"editor.autoClosingOvertype": "never",
+	"editor.autoIndent": "none",
+	"editor.autoSurround": "never",
+	"editor.lineNumbers": "relative",
+	"editor.minimap.enabled": false,
+	"editor.suggest.selectionMode": "never",
+	"editor.wordWrap": "on",
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
+	"files.exclude": {
+		"**/.DS_Store": false,
+		"**/.git": false,
+		"**/.hg": false,
+		"**/.svn": false,
+		"**/Thumbs.db": false
+	},
+	"terminal.integrated.enablePersistentSessions": false,
+	"terminal.integrated.persistentSessionReviveProcess": "never",
+	"vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim-linux-x86_64/bin/nvim",
+	"vscode-neovim.useWSL": true,
+	"vscode-neovim.wslDistribution": "container",
+	"window.autoDetectColorScheme": true,
+	"window.confirmBeforeClose": "always",
+	"window.menuBarVisibility": "compact",
+	"window.restoreWindows": "none",
+	"workbench.editor.closeEmptyGroups": false,
+	"workbench.editor.editorActionsLocation": "titleBar",
+	"workbench.editor.wrapTabs": true,
+	"workbench.layoutControl.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"workbench.preferredDarkColorTheme": "Gruvbox Dark Soft",
+	"workbench.preferredLightColorTheme": "Gruvbox Light Soft",
+	"workbench.sideBar.location": "right",
+	"workbench.startupEditor": "none",
+	"workbench.welcomePage.walkthroughs.openOnInstall": false
+}
