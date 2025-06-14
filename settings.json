@@ -21,7 +21,6 @@
 		"**/.svn": false,
 		"**/Thumbs.db": false
 	},
-	"terminal.integrated.enablePersistentSessions": false,
 	"terminal.integrated.persistentSessionReviveProcess": "never",
 	"vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim-linux-x86_64/bin/nvim",
 	"vscode-neovim.useWSL": true,
