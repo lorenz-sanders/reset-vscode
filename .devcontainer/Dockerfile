@@ -11,7 +11,7 @@ RUN apt-get -y dist-upgrade && \
     apt-get -y autopurge && \
     apt-get -y install curl git gnupg less man patch ssh vim
 
-COPY '.vimrc' '/etc/skel'
+COPY --chmod=644 '.vimrc' '/etc/skel'
 ARG username='dev'
 RUN sed -i '/PS1.*\\\$/s/\\\$/\\n\0/' '/etc/skel/.bashrc' && \
     useradd "${username}" -ms '/bin/bash'
