@@ -1,5 +1,6 @@
 {
 	"chat.commandCenter.enabled": false,
+	"chat.disableAIFeatures": true,
 	"dev.containers.copyGitConfig": false,
 	"dev.containers.dockerCredentialHelper": false,
 	"dev.containers.forwardWSLServices": false,
@@ -30,6 +31,7 @@
 	"remote.tunnels.tunnelCredentialCommand": null,
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 	"terminal.integrated.persistentSessionReviveProcess": "never",
+	"terminal.integrated.suggest.enabled": false,
 	"window.autoDetectColorScheme": true,
 	"window.confirmBeforeClose": "always",
 	"window.menuBarVisibility": "compact",
