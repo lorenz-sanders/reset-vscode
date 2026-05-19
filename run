@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
+set -euxo pipefail
+
+rm -rf "${HOME}/.vscode"
+rm -rf "${HOME}/.vscode-shared"
+rm -rf "${HOME}/Library/Application Support/Code"
+cat extensions-list.txt | xargs -I {} code /c --install-extension {}
+cp "${SCRIPT_DIR}/settings.json" "${HOME}/Library/Application Support/Code/User"
+cp "${SCRIPT_DIR}/keybindings.json" "${HOME}/Library/Application Support/Code/User"
