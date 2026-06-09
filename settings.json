@@ -14,10 +14,8 @@
 	"editor.autoClosingOvertype": "never",
 	"editor.autoIndent": "none",
 	"editor.autoSurround": "never",
-	"editor.lineNumbers": "relative",
 	"editor.minimap.enabled": false,
 	"editor.suggest.selectionMode": "never",
-	"editor.wordWrap": "on",
 	"extensions.experimental.affinity": {
 		"asvetliakov.vscode-neovim": 1
 	},
