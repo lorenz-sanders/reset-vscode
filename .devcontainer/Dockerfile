@@ -1,23 +1,19 @@
 FROM debian:sid
 
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+
 RUN apt-get update && \
-    apt-get -y install locales && \
-    sed -i '/en_US.UTF-8/s/^# //g' '/etc/locale.gen' && \
-    locale-gen
+    apt-get -y dist-upgrade && \
+    apt-get -y autopurge
 
-ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
+RUN apt-get -y install curl git gnupg less man parallel patch ssh vim wget xz-utils
 
-RUN apt-get -y dist-upgrade && \
-    apt-get -y autopurge && \
-    apt-get -y install curl git gnupg less man patch ssh vim
+ARG USERNAME
+RUN useradd "${USERNAME}" -ms '/bin/bash'
 
-COPY --chmod=644 '.vimrc' '/etc/skel'
-ARG username='dev'
-RUN sed -i '/PS1.*\\\$/s/\\\$/\\n\0/' '/etc/skel/.bashrc' && \
-    useradd "${username}" -ms '/bin/bash'
-
-ARG workspaceFolder
-RUN install -d -o "${username}" -g "$(id -gn "${username}")" "${workspaceFolder}" && \
-    ln -s "${workspaceFolder}/host/.vscode" "${workspaceFolder}/.vscode"
-
-USER "${username}"
+ARG COMPOSE_PROJECT_NAME
+COPY --chmod=644 --chown="${USERNAME}:${USERNAME}" '.vimrc' "/home/${USERNAME}"
+COPY --chmod=755 'dotfiles_hook' '/usr/local/bin'
+RUN install -d -o "${USERNAME}" -g "${USERNAME}" "/home/${USERNAME}/dotfiles" && \
+    install -d -o "${USERNAME}" -g "${USERNAME}" "/workspaces/${COMPOSE_PROJECT_NAME}" && \
+    sed -i '/PS1.*\\\$/s/\\\$/\\n\0/' "/home/${USERNAME}/.bashrc"

@@ -1,5 +1,11 @@
+set breakindent
+set display+=lastline
+set hlsearch
+set incsearch
+set linebreak
 set number
 set relativenumber
 set shiftwidth=2
 set tabstop=2
+set wrap
 syntax on

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ -x "${HOME}/dotfiles/setup" ]
+then
+	cd "${HOME}/dotfiles"
+	./setup
+fi

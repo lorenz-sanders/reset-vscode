@@ -1,10 +1,4 @@
 {
-	"build": {
-		"args": {
-			"workspaceFolder": "${containerWorkspaceFolder}"
-		},
-		"dockerfile": "Dockerfile"
-	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -12,13 +6,8 @@
 			]
 		}
 	},
-	"mounts": [
-		{
-			"source": "${localWorkspaceFolder}",
-			"target": "${containerWorkspaceFolder}/host",
-			"type": "bind"
-		}
-	],
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"workspaceMount": "source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
+	"dockerComposeFile": "compose.yaml",
+	"initializeCommand": "echo 'COMPOSE_PROJECT_NAME=${localWorkspaceFolderBasename}' > .env",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
 }
