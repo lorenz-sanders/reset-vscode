@@ -26,6 +26,9 @@
 		"**/.svn": false,
 		"**/Thumbs.db": false
 	},
+	"markdown-preview-enhanced.breakOnSingleNewLine": false,
+	"markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
+	"markdown-preview-enhanced.scrollSync": false,
 	"remote.tunnels.tunnelCredentialCommand": null,
 	"terminal.integrated.defaultProfile.windows": "Command Prompt",
 	"terminal.integrated.persistentSessionReviveProcess": "never",
